@@ -22,6 +22,7 @@ export default function Footer() {
           <ul className="footer-links">
             <li><Link to="/">Shop</Link></li>
             <li><Link to="/search">Search</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 

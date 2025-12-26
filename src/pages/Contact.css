@@ -1,0 +1,250 @@
+/* Contact Page - Desktop First */
+.contact-page {
+  min-height: calc(100vh - 80px);
+  background-color: #FFF6EE;
+  padding: 80px 24px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Left Section - Contact Info */
+.contact-info-section {
+  padding-right: 24px;
+}
+
+.contact-heading {
+  font-size: 48px;
+  font-weight: 700;
+  color: #4A2E1F;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+}
+
+.contact-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #8A5A3C;
+  margin: 0 0 32px 0;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #E5D4C6;
+}
+
+.contact-info-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.info-block {
+  padding: 24px 0;
+  border-bottom: 1px solid #E5D4C6;
+}
+
+.info-block:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8A5A3C;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px 0;
+}
+
+.info-value {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #4A2E1F;
+  margin: 0;
+}
+
+/* Right Section - Contact Form */
+.contact-form-section {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 16px rgba(74, 46, 31, 0.08);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4A2E1F;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 15px;
+  color: #4A2E1F;
+  background-color: #FFF2E8;
+  border: 1px solid #F0DDD0;
+  border-radius: 10px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #B8968A;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: #F68B2C;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(246, 139, 44, 0.1);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.5;
+}
+
+.submit-button {
+  width: 100%;
+  height: 52px;
+  background-color: #F68B2C;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.submit-button:hover {
+  background-color: #E67A1F;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(246, 139, 44, 0.3);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Tablet Breakpoint - 768px */
+@media screen and (max-width: 1024px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-info-section {
+    padding-right: 0;
+  }
+
+  .contact-heading {
+    font-size: 40px;
+  }
+}
+
+/* Mobile Breakpoint - 768px and below */
+@media screen and (max-width: 768px) {
+  .contact-page {
+    padding: 48px 20px;
+  }
+
+  .contact-container {
+    gap: 40px;
+  }
+
+  .contact-heading {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .contact-description {
+    font-size: 15px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+  }
+
+  .info-block {
+    padding: 20px 0;
+  }
+
+  .info-label {
+    font-size: 12px;
+  }
+
+  .info-value {
+    font-size: 14px;
+  }
+
+  .contact-form-section {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .submit-button {
+    height: 48px;
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile - 480px and below */
+@media screen and (max-width: 480px) {
+  .contact-page {
+    padding: 40px 16px;
+  }
+
+  .contact-heading {
+    font-size: 28px;
+  }
+
+  .contact-description {
+    font-size: 14px;
+  }
+
+  .contact-form-section {
+    padding: 24px 20px;
+  }
+
+  .form-field label {
+    font-size: 13px;
+  }
+}

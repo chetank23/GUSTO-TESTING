@@ -10,13 +10,14 @@ import Account from './pages/Account'
 import Cart from './pages/Cart'
 import MyOrders from './pages/MyOrders'
 import Search from './pages/Search'
+import Contact from './pages/Contact'
 import AddAddress from './pages/AddAddress'
 import EditAddress from './pages/EditAddress'
 import './App.css'
 
 function AppContent() {
   const location = useLocation();
-  const showFooter = location.pathname === '/' || location.pathname === '/cart';
+  const showFooter = location.pathname === '/' || location.pathname === '/cart' || location.pathname === '/contact';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,6 +33,7 @@ function AppContent() {
         <Route path="/account" element={<Account />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/my-orders" element={<MyOrders />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/add-address" element={<AddAddress />} />
         <Route path="/edit-address/:id" element={<EditAddress />} />
       </Routes>
