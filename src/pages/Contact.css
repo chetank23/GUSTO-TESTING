@@ -1,15 +1,10 @@
-/* Base styles - Mobile First Approach */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Desktop First - Base Styles */
 .contact-page {
   min-height: calc(100vh - 80px);
   background-color: #f5f0eb;
-  padding: 30px 16px;
+  padding: 60px 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-container {
@@ -19,38 +14,41 @@
 }
 
 .contact-header {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   text-align: left;
 }
 
 .contact-header h1 {
-  font-size: 28px;
+  font-size: 48px;
   font-weight: 700;
   color: #5d4037;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .contact-header p {
-  font-size: 14px;
+  font-size: 16px;
   color: #8d6e63;
   line-height: 1.6;
-  max-width: 100%;
+  max-width: 600px;
 }
 
-/* Content Layout - Stacked on Mobile */
+/* Desktop Layout - Side by side */
 .contact-content {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-direction: row;
+  gap: 60px;
   width: 100%;
+  align-items: flex-start;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: 100%;
+  gap: 40px;
+  width: 350px;
+  min-width: 350px;
+  flex-shrink: 0;
 }
 
 .info-item {
@@ -58,16 +56,16 @@
 }
 
 .info-item h3 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #8d6e63;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .info-item p {
-  font-size: 14px;
+  font-size: 16px;
   color: #5d4037;
   line-height: 1.5;
   word-wrap: break-word;
@@ -75,24 +73,26 @@
 
 /* Form Wrapper */
 .contact-form-wrapper {
+  flex: 1 1 auto;
+  min-width: 0;
   background-color: #ffffff;
-  padding: 24px;
+  padding: 40px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   width: 100%;
 }
 
 .form-row {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   width: 100%;
 }
 
@@ -120,6 +120,7 @@
   background-color: #fafaf8;
   transition: all 0.3s ease;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -140,12 +141,12 @@
 }
 
 .submit-btn {
-  padding: 12px 24px;
+  padding: 14px 32px;
   background-color: #ff8c42;
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -163,8 +164,8 @@
   transform: translateY(0);
 }
 
-/* Tablet Styles (min-width: 641px) */
-@media screen and (min-width: 641px) {
+/* Tablet - 968px and below */
+@media only screen and (max-width: 968px) {
   .contact-page {
     padding: 40px 20px;
   }
@@ -184,10 +185,13 @@
   }
 
   .contact-content {
+    flex-direction: column;
     gap: 40px;
   }
 
   .contact-info {
+    width: 100%;
+    min-width: 100%;
     gap: 30px;
   }
 
@@ -219,60 +223,59 @@
   }
 }
 
-/* Desktop Styles (min-width: 969px) */
-@media screen and (min-width: 969px) {
+/* Mobile - 640px and below */
+@media only screen and (max-width: 640px) {
   .contact-page {
-    padding: 60px 20px;
+    padding: 30px 16px;
   }
 
   .contact-header {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .contact-header h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 28px;
+    margin-bottom: 12px;
   }
 
   .contact-header p {
-    font-size: 16px;
-    max-width: 600px;
-  }
-
-  /* Side-by-side layout for desktop */
-  .contact-content {
-    flex-direction: row;
-    gap: 60px;
-    align-items: flex-start;
-  }
-
-  .contact-info {
-    flex: 0 0 300px;
-    min-width: 300px;
-    max-width: 300px;
-    gap: 40px;
-  }
-
-  .contact-form-wrapper {
-    flex: 1;
-    padding: 40px;
+    font-size: 14px;
     max-width: 100%;
   }
 
+  .contact-content {
+    gap: 30px;
+  }
+
+  .contact-info {
+    gap: 24px;
+  }
+
   .info-item h3 {
-    font-size: 16px;
+    font-size: 14px;
+    margin-bottom: 6px;
   }
 
   .info-item p {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.5;
   }
-}
 
-/* Large Desktop Styles (min-width: 1200px) */
-@media screen and (min-width: 1200px) {
-  .contact-info {
-    flex: 0 0 350px;
-    min-width: 350px;
-    max-width: 350px;
+  .contact-form-wrapper {
+    padding: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-form {
+    gap: 20px;
+  }
+
+  .submit-btn {
+    padding: 12px 24px;
+    font-size: 15px;
   }
 }
