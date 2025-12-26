@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Typography */
+  --font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
+
+  /* Brand */
+  --brand-1: #ff6b35;
+  --brand-2: #ff8c42;
+  --bg-soft: #fff8f2;
+  --text-main: #1f1f1f;
+  --text-sub: #555;
+  --border-soft: #e8e0d8;
+
+  /* Spacing */
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Breakpoints */
+  --bp-320: 320px;
+  --bp-375: 375px;
+  --bp-425: 425px;
+  --bp-768: 768px;
+  --bp-1024: 1024px;
+  --bp-1280: 1280px;
+  --bp-1440: 1440px;
+
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-main);
+  background-color: var(--bg-soft);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-soft);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--brand-1);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--brand-2);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 760px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 980px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1340px;
+  }
+}

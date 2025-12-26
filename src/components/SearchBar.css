@@ -1,0 +1,271 @@
+.search-bar-container {
+  flex: 1;
+  margin: 0 50px;
+  position: relative;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 25px;
+  padding: 8px 15px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+  border-color: #ff8f38;
+  box-shadow: 0 0 0 3px rgba(255, 143, 56, 0.1);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  font-size: 14px;
+  outline: none;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  transform: scale(1.1);
+}
+
+.search-icon {
+  color: #999;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.search-button:hover .search-icon {
+  color: #ff8f38;
+}
+
+/* Dropdown Suggestions */
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  max-height: 450px;
+  overflow-y: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-top: -2px;
+  z-index: 1000;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover,
+.suggestion-item.selected {
+  background-color: #faf8f4;
+}
+
+.suggestion-image-wrapper {
+  width: 50px;
+  height: 50px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.suggestion-image {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.suggestion-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.suggestion-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.suggestion-description {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.suggestion-price {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff8f38;
+}
+
+.search-all {
+  background-color: #f5f3f0;
+  justify-content: center;
+  padding: 12px 15px;
+}
+
+.search-all-text {
+  font-size: 14px;
+  color: #ff8f38;
+  font-weight: 500;
+}
+
+.no-results {
+  padding: 20px 15px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Scrollbar styling */
+.suggestions-dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 4px;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-bar-container {
+    flex: 1;
+    margin: 0 4px;
+    max-width: 280px;
+  }
+
+  .search-bar {
+    padding: 6px 12px;
+  }
+
+  .search-input {
+    font-size: 13px;
+  }
+
+  .search-icon {
+    font-size: 16px;
+  }
+
+  .suggestion-item {
+    padding: 10px 12px;
+  }
+
+  .suggestion-image-wrapper {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+  }
+
+  .suggestion-name {
+    font-size: 13px;
+  }
+
+  .suggestion-description {
+    font-size: 11px;
+  }
+
+  .suggestion-price {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar-container {
+    margin: 0 4px;
+    max-width: 240px;
+  }
+
+  .search-bar {
+    padding: 5px 10px;
+    border-radius: 18px;
+  }
+
+  .search-input {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  .search-icon {
+    font-size: 14px;
+  }
+
+  .suggestions-dropdown {
+    max-height: 400px;
+  }
+
+  .suggestion-item {
+    padding: 8px 10px;
+  }
+
+  .suggestion-image-wrapper {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .suggestion-name {
+    font-size: 12px;
+  }
+
+  .suggestion-description {
+    font-size: 10px;
+  }
+
+  .suggestion-price {
+    font-size: 11px;
+  }
+}

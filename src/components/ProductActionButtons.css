@@ -1,0 +1,71 @@
+.product-action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.product-action-btn {
+  flex: 1 1 0;
+  height: 52px;
+  padding: 14px 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  color: white;
+}
+
+.product-action-btn:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+.product-action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Reserved classes for differentiation */
+.product-action-add {
+  background: #385F41;
+}
+
+@media (max-width: 768px) {
+  .product-action-buttons {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .product-action-btn {
+    font-size: 13px;
+    padding: 12px 14px;
+    height: 46px;
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-action-buttons {
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .product-action-btn {
+    font-size: 12px;
+    padding: 10px 12px;
+    height: 44px;
+    border-radius: 22px;
+  }
+}
+
